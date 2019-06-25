@@ -1,40 +1,41 @@
 #include "../cpu/isr.h"
 #include "../cpu/idt.c"
+#include "../cpu/types.h"
 #include "../drivers/screen.h"
 
 void isrInstall(){
-  setIDTgate(0,(unsigned int)isr0);
-  setIDTgate(1,(unsigned int)isr1);
-  setIDTgate(2,(unsigned int)isr2);
-  setIDTgate(3,(unsigned int)isr3);
-  setIDTgate(4,(unsigned int)isr4);
-  setIDTgate(5,(unsigned int)isr5);
-  setIDTgate(6,(unsigned int)isr6);
-  setIDTgate(7,(unsigned int)isr7);
-  setIDTgate(8,(unsigned int)isr8);
-  setIDTgate(9,(unsigned int)isr9);
-  setIDTgate(10,(unsigned int)isr10);
-  setIDTgate(11,(unsigned int)isr11);
-  setIDTgate(12,(unsigned int)isr12);
-  setIDTgate(13,(unsigned int)isr13);
-  setIDTgate(14,(unsigned int)isr14);
-  setIDTgate(15,(unsigned int)isr15);
-  setIDTgate(16,(unsigned int)isr16);
-  setIDTgate(17,(unsigned int)isr17);
-  setIDTgate(18,(unsigned int)isr18);
-  setIDTgate(19,(unsigned int)isr19);
-  setIDTgate(20,(unsigned int)isr20);
-  setIDTgate(21,(unsigned int)isr21);
-  setIDTgate(22,(unsigned int)isr22);
-  setIDTgate(23,(unsigned int)isr23);
-  setIDTgate(24,(unsigned int)isr24);
-  setIDTgate(25,(unsigned int)isr25);
-  setIDTgate(26,(unsigned int)isr26);
-  setIDTgate(27,(unsigned int)isr27);
-  setIDTgate(28,(unsigned int)isr28);
-  setIDTgate(29,(unsigned int)isr29);
-  setIDTgate(30,(unsigned int)isr30);
-  setIDTgate(31,(unsigned int)isr31);
+  setIDTgate(0,(u32)isr0);
+  setIDTgate(1,(u32)isr1);
+  setIDTgate(2,(u32)isr2);
+  setIDTgate(3,(u32)isr3);
+  setIDTgate(4,(u32)isr4);
+  setIDTgate(5,(u32)isr5);
+  setIDTgate(6,(u32)isr6);
+  setIDTgate(7,(u32)isr7);
+  setIDTgate(8,(u32)isr8);
+  setIDTgate(9,(u32)isr9);
+  setIDTgate(10,(u32)isr10);
+  setIDTgate(11,(u32)isr11);
+  setIDTgate(12,(u32)isr12);
+  setIDTgate(13,(u32)isr13);
+  setIDTgate(14,(u32)isr14);
+  setIDTgate(15,(u32)isr15);
+  setIDTgate(16,(u32)isr16);
+  setIDTgate(17,(u32)isr17);
+  setIDTgate(18,(u32)isr18);
+  setIDTgate(19,(u32)isr19);
+  setIDTgate(20,(u32)isr20);
+  setIDTgate(21,(u32)isr21);
+  setIDTgate(22,(u32)isr22);
+  setIDTgate(23,(u32)isr23);
+  setIDTgate(24,(u32)isr24);
+  setIDTgate(25,(u32)isr25);
+  setIDTgate(26,(u32)isr26);
+  setIDTgate(27,(u32)isr27);
+  setIDTgate(28,(u32)isr28);
+  setIDTgate(29,(u32)isr29);
+  setIDTgate(30,(u32)isr30);
+  setIDTgate(31,(u32)isr31);
 
   setIDT();
 }

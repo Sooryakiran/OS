@@ -34,7 +34,7 @@ loadKernel:
   call printString              ; print message
 
   mov bx, KERNEL_OFFSET
-  mov dh, 18
+  mov dh, 17
   mov dl, [BOOT_DRIVE]
   call diskLoad
 

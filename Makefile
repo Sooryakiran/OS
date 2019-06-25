@@ -6,7 +6,9 @@ HEADERS = $(wildcard kernel/*.h drivers/*.h )
 OBJ = ${C_SOURCES :.c = .o }
 # Defaul build target
 all : os-image
-	dd if=/dev/zero bs=1M count=4 >> os-image
+	dd if=/dev/zero bs=1 count=896 >> os-image
+	# dd if=/dev/zero of=disk.vdi bs=1024 count=720
+	# dd if=os-image of=disk.vdi conv=notrunc
 
 os-image: boot/boot_sector.bin kernel/kernel.bin
 	cat $^ > os-image

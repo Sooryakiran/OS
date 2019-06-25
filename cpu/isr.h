@@ -1,6 +1,9 @@
 #ifndef ISR_H
 #define ISR_H
 
+#include "../cpu/types.h"
+
+
 extern void isr0();
 extern void isr1();
 extern void isr2();
@@ -35,10 +38,10 @@ extern void isr30();
 extern void isr31();
 
 typedef struct{
-  unsigned int ds;
-  unsigned int edi, esi, ebp, esp, edx, ecx, eax;
-  unsigned int intNo, errCode;
-  unsigned int eip, cs, eflags, useresp, ss;
+  u32 ds;
+  u32 edi, esi, ebp, esp, edx, ecx, eax;
+  u32 intNo, errCode;
+  u32 eip, cs, eflags, useresp, ss;
 } registers_t;
 
 void isrInstall();

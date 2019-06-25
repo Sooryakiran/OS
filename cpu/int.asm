@@ -74,7 +74,7 @@ isr0:
     push byte 0
     push byte 0
     jmp isr_common_stub
-
+        
 ; 1: Debug Exception
 isr1:
     cli
