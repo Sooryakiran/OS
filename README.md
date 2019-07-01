@@ -7,6 +7,6 @@ TODO: Handling Interrupts
 To run the OS using Qemu,
 run
 
-        qemu os-image
+    qemu os-image
     
 To run in virtual box, use the image.vdi disk image.
